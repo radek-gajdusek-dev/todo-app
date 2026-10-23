@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>To-do app</title>
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body>
+        <header class="main-header">
+            <div class="container">
+                <div class="header-content">
+                    <h1 class="main-title">My Tasks</h1>
+
+                    <p class="greeting-title">Welcome back!</p>
+
+                    <p class="post-title">Let's organize your day</p>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <section class="task-manager">
+                    <form action="#" method="POST">
+                        <div class="form-row-group">
+                            <div class="form-field">
+                                <label for="add-task" class="sr-only">New Task</label>
+                                <input
+                                    type="text"
+                                    name="add-task"
+                                    id="add-task"
+                                    placeholder="Add a new task"
+                                    required />
+                            </div>
+
+                            <button type="submit" class="btn btn-add-task" aria-label="Add task">+</button>
+                        </div>
+                    </form>
+
+                    <div class="tasks-header">
+                        <h2 class="tasks-title">My tasks</h2>
+                        <p class="tasks-count">3 tasks</p>
+                    </div>
+
+                    <ul class="task-list">
+                        <li class="task-item">
+                            <input type="checkbox" name="task-1" id="task-1" checked />
+
+                            <label for="task-1"> Finish Git basics </label>
+
+                            <button type="button" class="btn btn-delete-task" aria-label="Delete Finish Git Basics">
+                                Delete
+                            </button>
+                        </li>
+
+                        <li class="task-item">
+                            <input type="checkbox" name="task-2" id="task-2" />
+
+                            <label for="task-2"> Create HTML structure </label>
+
+                            <button type="button" class="btn btn-delete-task" aria-label="Delete Create HTML structure">
+                                Delete
+                            </button>
+                        </li>
+
+                        <li class="task-item">
+                            <input type="checkbox" name="task-3" id="task-3" />
+
+                            <label for="task-3"> Style the application </label>
+
+                            <button type="button" class="btn btn-delete-task" aria-label="Delete Style the application">
+                                Delete
+                            </button>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>
