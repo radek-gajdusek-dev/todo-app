@@ -6,8 +6,12 @@
     --font-display: "Patrick Hand", cursive;
 
     --color-background: #333;
+    --color-lighter-background: #474747;
     --color-text: #D6D6D6;
     --color-muted: #A0A0A0;
+    --color-highlight: #6772A5;
+
+    --control-height: 2.75rem;
 }
 
 /* ============================
@@ -181,4 +185,52 @@ a {
     flex: 1;
     min-width: 0;
     overflow-wrap: anywhere;
+}
+
+.add-task-input,
+.btn-add-task {
+    height: var(--control-height);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    border: 2px solid var(--color-text);
+    border-radius: 0.5rem;
+
+    transition: 
+        background-color .2s ease,
+        border-color .2s ease;
+}
+
+.add-task-input:focus-visible,
+.btn-add-task:focus-visible {
+    border-color: var(--color-highlight);
+    outline: 2px solid var(--color-text);
+    outline-offset: 2px;
+}
+
+.add-task-input {
+    padding: 0.4rem 0.8rem;
+}
+
+.add-task-input::placeholder {
+    color: var(--color-muted);
+}
+
+.btn-add-task {
+    width: var(--control-height);
+    flex-shrink: 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+    cursor: pointer;
+
+    transition: 
+        background-color .3s ease,
+        transform .2s ease;
+}
+
+.btn-add-task:hover {
+    background-color: var(--color-lighter-background);
+}
+
+.btn-add-task:active {
+    transform: scale(0.96);
 }
